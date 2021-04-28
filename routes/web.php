@@ -17,6 +17,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/marketing/add', function () {
+    return view('marketingadd');
+});
+
 Auth::routes(
     [
         'register' => false

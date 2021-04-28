@@ -12,9 +12,9 @@
     <!-- Styles -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
   </head>
-  <body>
+  <body class="bg-light">
     <div id="app">
-      <header class="p-3 mb-3 border-bottom mt-5 border">
+      <header class="mb-3 border-bottom mt-5 border bg-white shadow-sm">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
@@ -23,15 +23,15 @@
               </svg>
             </a>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li>
+              <li class="border p-1">
                 <a  class="nav-link px-2 link-dark" href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
                 </a>
               </li>
-              <li><a href="#" class="nav-link px-2 link-dark">Выставки</a></li>
-              <li><a href="#" class="nav-link px-2 link-dark">Тур пакенты</a></li>
-              <li><a href="#" class="nav-link px-2 link-dark">Сотрудники</a></li>
-              <li><a href="#" class="nav-link px-2 link-dark">Маркетинг</a></li>
+              <li class="border p-1"><a href="#" class="nav-link px-2 link-dark">Выставки</a></li>
+              <li class="border p-1"><a href="#" class="nav-link px-2 link-dark">Тур пакенты</a></li>
+              <li class="border p-1"><a href="#" class="nav-link px-2 link-dark">Сотрудники</a></li>
+              <li class="border p-1"><a href="#" class="nav-link px-2 link-dark">Маркетинг</a></li>
             </ul>
             <div class="dropdown text-end">
               <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,17 +44,17 @@
               <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
                 @guest
                 @if (Route::has('login'))
-                <li><a class="dropdown-item" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                <li class="border p-1"><a class="dropdown-item" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                 @endif
                 @if (Route::has('register'))
-                <li><a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                <li class="border p-1"><a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                 @endif
                 @else
-                <li><a class="dropdown-item" href="#">Birnima</a></li>
-                <li>
+                <li class="border p-1"><a class="dropdown-item" href="#">Birnima</a></li>
+                <li class="border p-1">
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="{{ route('logout') }}"
+                <li class="border p-1"><a class="dropdown-item" href="{{ route('logout') }}"
                   onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
                   {{ __('Logout') }}</a>
@@ -72,6 +72,6 @@
         @yield('content')
       </main>
     </div>
-    <script src="{{ asset('/assets/js/bootstrap.bundle.min.js') }}" defer></script> 
+    <script src="{{ asset('/assets/js/bootstrap.bundle.min.js') }}" defer></script>
   </body>
 </html>
